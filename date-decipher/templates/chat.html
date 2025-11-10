@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Live Chat
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <h2>Live Chat</h2>
+    <div id="chat" style="height: 500px; overflow-y: auto; border: 1px solid #ccc; margin-bottom: 20px;"></div>
+    <video id="video" width="320" height="240" autoplay></video>
+    <button id="feedbackButton">Get Feedback</button>
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <p id="feedbackText"></p>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+{% endblock %}
