@@ -1,76 +1,65 @@
-# Date Decipher
+# 💌 Date Decipher
 
-Welcome to Date Decipher, a web-based chat interface designed to recreate the experience of flirting by passing a note to your crush. This unique chat application captures real-time facial expressions to assess interest, enhancing interactions with dynamic feedback.
+**Date Decipher** is an interactive web-based chat app that recreates the thrill of *reading a flirty note from your crush* but with AI-powered feedback.  
+As users read sweet or playful texts, the app captures their **real-time facial expressions** using the **Google Cloud Vision API**, mirrors those emotions as emojis in the chat, and finally predicts how the “crush” might feel based on those reactions.
 
-## Video Walkthrough
+---
 
-Watch this video walkthrough (https://youtu.be/3Ip_VW0s-7o?si=5SVgwdZiQJDEedpV) to see Date Decipher in action and understand how it works from a user's perspective.
+## 🎯 Project Overview
 
+Developed as my **CS50 Final Project**, Date Decipher blends web development, emotion recognition, and playful interaction design.  
+It explores how technology can make digital communication more expressive and human by reading subtle emotional cues; the smiles, surprise, and blushing moments that words alone can’t convey.
 
-## Features
+---
 
-- **User Authentication**: Includes functionalities for user registration, login, and password reset.
-- **Live Chat Interface**: Simulates passing a note to your crush with pre-defined flirty chats.
-- **Emotion Detection**: Utilizes Google Cloud Vision API to analyze facial expressions and represent them with emojis.
-- **Feedback System**: Evaluates the emojis to determine if your crush is likely to be interested and provides feedback.
-- **Privacy Focused**: Ensures privacy by clearing feedback after viewing and redirecting users to the home page.
+## ✨ Core Features
 
-## Getting Started
+- **Emotion-Aware Chat** – Captures facial expressions in real time as users read cute messages from their crush  
+- **Emoji Reflection** – Displays corresponding emojis in the chat to visualize emotions (joy, surprise, neutrality, etc.)  
+- **Final Feedback** – At the end of the chat, summarizes how the crush “feels about you” based on cumulative emotion data  
+- **User Authentication** – Secure login and registration flow  
+- **Privacy-Focused** – Clears feedback after viewing to ensure confidentiality  
 
-Follow these instructions to set up and run Date Decipher on your local machine for development and testing purposes.
+---
 
-### Prerequisites
+## 🧠 How It Works
 
-Before you start, ensure you have Python 3.8 or higher installed along with pip. You'll also need a Google Cloud Vision API key for emotion detection features.
+1. The user logs in and starts a chat session through a simple **Flask** interface.  
+2. As they read playful “crush” messages, their webcam captures facial expressions.  
+3. The **Google Cloud Vision API** analyzes each frame for emotion categories (joy, sorrow, surprise, anger, etc.).  
+4. The detected emotion appears as an emoji in the chat window, making the conversation dynamic and reactive.  
+5. Once the chat ends, the system analyzes the sequence of emotions and provides **final feedback** — an interpretation of how engaged or interested the crush appeared.  
+6. Feedback is cleared automatically for privacy.
 
-### Installation Steps
+---
 
-1. **Download and Extract the Project**:
-   - Download the `date-decipher.zip` file and extract its contents into your preferred directory.
+## 🧩 Technologies Used
 
-2. **Environment Setup**:
-   - Open the Date Decipher folder in a code editor that supports integrated terminals, such as VS Code.
-   - Right-click and choose "Open in Integrated Terminal".
+**Languages & Frameworks:** Python, Flask, HTML, CSS, JavaScript  
+**APIs:** Google Cloud Vision (for facial expression detection)  
+**Libraries:** Requests, Jinja2, Bootstrap  
 
-3. **Install Dependencies**:
-   ```bash
-   pip install Flask requests google-cloud-vision
+---
 
+## 📺 Demo
 
-4. **Configure Google Cloud Vision API**:
-    Obtain an API key from the Google Cloud Console.
+🎥 **Video Walkthrough:** [Watch on YouTube](https://youtu.be/3Ip_VW0s-7o?si=5SVgwdZiQJDEedpV)
 
-#### Running the Application
+---
 
-1. **Launch the Server**:
-    ```bash
-    flask run
-    ```
-    This command starts the server on your local machine.
+## 🌱 Reflection
 
-2. **Access the Application**:
-    Use the HTTP link shown in the terminal to open Date Decipher in a web browser.
+This project was my first deep dive into **emotion-aware computing** — combining AI with human connection.  
+It taught me how to integrate real-time facial recognition into a web app and translate emotional signals into visual, interactive experiences.  
+Date Decipher reflects my fascination with the space where **data meets emotion** — and how algorithms can enhance communication rather than replace it.
 
-3. **Interaction Guide**:
-    - Log in or register to initiate the chat.
-    - Conduct the chat session. Once completed, a 'Get Feedback' button will appear.
-    - Click 'Get Feedback' to see the analysis based on your crush's reactions.
-    - Feedback will automatically clear, redirecting you back for privacy.
+---
 
-##### Troubleshooting
+## 🙏 Acknowledgments
+- **Google Cloud Vision API** – powering real-time emotion recognition  
+- **Flask Community** – for the flexible web framework  
+- **CS50 Faculty & Duck Debugger** – for foundational support and inspiration  
+- **OpenAI’s ChatGPT** – for debugging and documentation assistance  
 
-- **Problem**: Application does not start.
-  **Solution**: Ensure all dependencies are installed and the environment variable for the Google Cloud API key is set.
-
-- **Problem**: Emotion detection is not working.
-  **Solution**: Verify that the Google Cloud Vision API key is valid and has not expired. Check the console for any error messages that might indicate what went wrong.
-
-##### Acknowledgments
-
-- **Google Cloud Vision**: Special thanks to Google Cloud Vision for providing the facial recognition technology that powers the emotion detection capabilities of our application.
-- **Flask Community**: Appreciation to the Flask community for the robust web framework that forms the backbone of our application.
-- **Open-Source Contributors**: Thanks to all open-source contributors whose tools were utilized in this project, enhancing its functionality and reliability.
-- **Project Inspiration**: Inspired by [Valentine](https://valentine.mewtru.com/), this project aims to capture the magic of the moment you ask someone to be your Valentine using an engaging animation
-- **CS50 Duck and OpenAI's ChatGPT**: Gratitude to CS50 Duck and OpenAI's ChatGPT for their assistance in debugging and refining the project.
-
+---
 
